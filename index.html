@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+  <header>
+    <!-- поиск -->
+    <search-goods v-model="searchLine" id="serch" @filter-goods="FilterGoods"></search-goods> 
+    <button class="button goods-item-Cart" v-on:click="getCartData()">Корзина</button>
+  </header>
+  <main>
+    <!-- результаты поиска -->
+    <resul-goods :filteredgoods="filteredgoods"></resul-goods> 
+    <!-- товары -->
+    <goods-list :goods="goods"> 
+    <div class="container">
+      <div class="loader"></div>
+    </div>
+    </goods-list> 
+    <!-- корзина -->
+    <goods-item :good="good"></goods-item> 
+  </main>
+  </div> 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="components.js"></script>
+</body>
+</html>

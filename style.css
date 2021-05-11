@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.cart-button ,.del-button,.button-task,.button{
+    padding: 15px;
+    background-color: #a496b6;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: 2px solid #a496b6;
+    transition: 0.5s;
+}
+.goods-item-Cart{
+  margin-left: 10%;
+  margin-right:14%;
+}
+.button:hover{
+    background-color: #fbfbfb;
+    color: #000000;
+}
+.search-button{
+  margin-left: 45px;
+}
+.goods-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.goods-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 250px;
+    margin-top: 10px;
+    background: #9e97aa;
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin: 2rem;
+}
+
+.goods-item > h3{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+.goods-item > p{
+    background: #FFFFFF;
+    display: block;
+    padding:20px;
+    margin: 0;
+    border: 2px solid #a496b6;
+    box-sizing: border-box;
+    color: #445162;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.goods-list-cart{
+    text-align: center;
+    overflow: hidden;
+}
+.goods-list-cart >h3{
+    background-color:#a496b6 ;
+    color:#ffffff;    
+    width: 100%;
+    padding: 20px;
+}
+.goods-list-cart-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.task{
+    padding: 0 calc(50% - 1172px / 2);
+    overflow: hidden;
+}
+
+  .wrap-input100 {
+    width: 50%;
+    position: relative;
+    border:none;
+  }
+.wrap-serch{
+  width: 400px;
+  display: flex;
+
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+  .input100 {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.2;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  input.input100 {
+    height: 45px;
+  }
+  
+  .focus-input100 {
+    position: absolute;
+    display: block;
+    width: calc(100% + 21px);
+    height:48px ;
+    top: -16px;
+    left: -16px;
+    pointer-events: none;
+    border: 1px solid #a785d4;
+    border-radius: 5px;
+    visibility: hidden;
+    margin: 1rem;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: scaleX(1.1) scaleY(1.3);
+    text-align: center;
+    font-family: Montserrat-Bold;
+  }
+  
+  .input100:focus + .focus-input100 {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  textarea{
+    max-width: 100%;
+  }
+  .button-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login100-form-btn {
+    width: 50%;
+    font-family: Montserrat-Bold;
+    text-transform: uppercase;
+  }
+  
+  .input_error{
+    border: 1px solid red;
+  }
+  .searchRes{
+    display: none;
+  }
+  .searchRes-item{
+    width: 15%;
+  }
+  #cart{
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16em;
+    transform: rotate(45deg);
+    }
+    .loader {
+    width: 5em;
+    height: 2em;
+    border: 2px groove whitesmoke;
+    border-radius: 5em;
+    margin-left: -12%;
+    position: relative;
+    animation: Slide_Me 1.3s ease infinite;
+    }
+    .loader::after {
+    content: "";
+    width: 2em;
+    height: 2em;
+    background: lightgoldenrodyellow;
+    position: fixed;
+    border-radius: 4em;
+    animation: Move 1.3s ease infinite;
+    }
+    @keyframes Slide_Me {
+    0% {
+        transform: translateX(0px);
+    }
+    20% {
+        width: 4.8em;
+    }
+    50% {
+        transform: translateX(120px);
+        width: 2em;
+    }
+    70% {
+        width: 4.8em;
+    }
+    100% {
+        transform: translateX(0px);
+        width: 2em;
+    }
+    }
+    @keyframes Move {
+    15% {
+        right: 0%;
+        background: lightcoral;
+    }
+    100% {
+        background: lightgreen;
+    }
+    }
